@@ -1,0 +1,117 @@
+<html>
+<head>
+<style>
+
+
+form {
+    background-color: lightgray;
+	border-style: solid;
+	border-color: gray;
+	box-shadow:10px 10px black;	
+	border-radius: 6px;
+	
+
+  
+  
+  width: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  resize: both;
+  overflow: auto;
+
+}
+
+#mygtukas{
+	     padding: 7px 15px;
+    background: linear-gradient(white , #007153); 
+	border-radius: 5px;
+}
+
+@keyframes pav {
+  from { opacity: 0.5; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes pav {
+  from {
+		 -webkit-transform: scale(1, 1);
+		}
+  to   {
+		 -webkit-transform: scale(2, 1);
+		}
+}
+
+
+#mygtukas:hover { 
+// atsuku skaidruma i pradinis
+animation-name: pav;
+  animation-duration: 1s;
+  -webkit-animation-name: pav;
+  -webkit-animation-duration: 1s;
+}
+
+
+
+</style>
+</head>
+
+
+<form id="form" onsubmit="return false;">
+
+Pasirinkite datą: <input type="date" id="userInput" />	
+Parinkite valiutą:	<select id="userInput2">
+	  <option value="">Visos valiutos</option>
+	  <option value="AUD">Australijos doleris</option>
+	  <option value="BGN">Bulgarijos levas</option>
+	  <option value="BRL">Brazilijos realas</option>
+	  <option value="CAD">Kanados doleris</option>
+	  <option value="CHF">Šveicarijos frankas</option>
+	  <option value="CNY">Kinijos žeminbi juanis</option>
+	  <option value="CZK">Čekijos krona</option>
+	  <option value="DKK">Danijos krona</option>
+	  <option value="GBP">Didžiosios Britanijos svaras sterlingų</option>
+	  <option value="HKD">Honkongo doleris</option>
+	  <option value="HRK">Kroatijos kuna</option>
+	  <option value="HUF">Vengrijos forintas</option>
+	  <option value="IDR">Indonezijos rupija</option>
+	  <option value="ILS">Izrealio naujasis šešklis</option>
+	  <option value="INR">Indijos rupija</option>
+	  <option value="ISK">Islandijos krona</option>
+	  <option value="JPY">Japonijos jena</option>
+	  <option value="KRW">Pietu Korėjos vonas</option>
+	  <option value="MXN">Meksikos pesas</option>
+	  <option value="MYR">Malaizijos ringitas</option>
+	  <option value="NOK">Norvegijos krona</option>
+	  <option value="NZD">Naujosios Zelandijos doleris</option>
+	  <option value="PHP">Filipinų pesas</option>
+	  <option value="PLN">Lenkijos zolotas</option>
+	  <option value="RON">Rumunijos lėja</option>
+	  <option value="RUB">Rusijos rublis</option>
+	  <option value="SEK">Švedijos krona</option>
+	  <option value="SGD">Singapūros doleris</option>
+	  <option value="THB">Tailando batas</option>
+	  <option value="TRY">Turkijos lira</option>
+	  <option value="USD">JAV doleris</option>
+	  <option value="ZAD">Pietų Afrikos Respiblikos randas</option>
+	  
+</select>
+	<button id="mygtukas" onclick="myFunction()">Pasirinkiti </button>
+	
+	</form>
+
+
+
+
+
+
+<script>
+function myFunction() {
+var x = document.getElementById("userInput").value;
+var y = document.getElementById("userInput2").value;
+location.replace("https://www.lb.lt/lt/kasdien-skelbiami-euro-ir-uzsienio-valiutu-santykiai-skelbia-europos-centrinis-bankas?class=Eu&type=day&selected_curr="+y+"&date_day="+x)     
+}
+</script>
+</html>
